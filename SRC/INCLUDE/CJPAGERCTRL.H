@@ -6,7 +6,7 @@
 // providing that this notice and the authors name and all copyright   
 // notices remains intact. If the source code in this file is used in   
 // any  commercial application then a statement along the lines of   
-// "Portions Copyright © 1998 Kirk Stowell" must be included in   
+// "Portions Copyright ?1998 Kirk Stowell" must be included in   
 // the startup banner, "About" box or printed documentation. An email   
 // letting me know that you are using it would be nice as well. That's   
 // not much to ask considering the amount of work that went into this.  
@@ -80,8 +80,8 @@ public:
 	// Generated message map functions
 protected:
 	//{{AFX_MSG(CCJPagerCtrl)
-	virtual BOOL OnPagerScroll(NMPGSCROLL* pNMPGScroll, LRESULT * pResult);
-	virtual BOOL OnPagerCalcSize(NMPGCALCSIZE * pNMPGCalcSize, LRESULT* pResult);
+	virtual BOOL OnPagerScroll(NMHDR* pNMHDRPGScroll, LRESULT * pResult);
+	virtual BOOL OnPagerCalcSize(NMHDR * pNMHDRCalcSize, LRESULT* pResult);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

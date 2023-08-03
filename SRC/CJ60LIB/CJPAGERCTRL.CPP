@@ -1,6 +1,6 @@
 // CJPagerCtrl.cpp : implementation file
 //
-// Copyright © 1998 Written by Kirk Stowell   
+// Copyright ?1998 Written by Kirk Stowell   
 //		mailto:kstowel@sprynet.com
 //		http://www.geocities.com/SiliconValley/Haven/8230
 //
@@ -10,7 +10,7 @@
 // providing that this notice and the authors name and all copyright   
 // notices remains intact. If the source code in this file is used in   
 // any  commercial application then a statement along the lines of   
-// "Portions Copyright © 1998 Kirk Stowell" must be included in   
+// "Portions Copyright ?1998 Kirk Stowell" must be included in   
 // the startup banner, "About" box or printed documentation. An email   
 // letting me know that you are using it would be nice as well. That's   
 // not much to ask considering the amount of work that went into this.  
@@ -132,10 +132,10 @@ DWORD CCJPagerCtrl::GetButtonState(int iButton)
 	return Pager_GetButtonState(m_hWnd,iButton);
 }
 
-BOOL CCJPagerCtrl::OnPagerCalcSize(NMPGCALCSIZE* pNMPGCalcSize, LRESULT* pResult)
+BOOL CCJPagerCtrl::OnPagerCalcSize(NMHDR* pNMHDRPGCalcSize, LRESULT* pResult)
 {
     *pResult = 0;
-
+	NMPGCALCSIZE *pNMPGCalcSize = (NMPGCALCSIZE *)pNMHDRPGCalcSize;
 	switch(pNMPGCalcSize->dwFlag)
     {
 	case PGF_CALCWIDTH:
@@ -150,10 +150,10 @@ BOOL CCJPagerCtrl::OnPagerCalcSize(NMPGCALCSIZE* pNMPGCalcSize, LRESULT* pResult
 	return 0;
 }
 
-BOOL CCJPagerCtrl::OnPagerScroll(NMPGSCROLL* pNMPGScroll, LRESULT* pResult)
+BOOL CCJPagerCtrl::OnPagerScroll(NMHDR* pNMHDRPGScroll, LRESULT* pResult)
 {
     *pResult = 0;
-	
+	NMPGSCROLL* pNMPGScroll = (NMPGSCROLL*)pNMHDRPGScroll;
   	switch(pNMPGScroll->iDir)
 	{
 	case PGF_SCROLLLEFT:

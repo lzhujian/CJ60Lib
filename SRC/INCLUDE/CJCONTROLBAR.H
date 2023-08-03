@@ -2,7 +2,7 @@
 //  
 // DevStudio Style Resizable Docking Control Bar.  
 //  
-// Copyright © 1998 Written by Kirk Stowell 
+// Copyright ?1998 Written by Kirk Stowell 
 //		mailto:kstowell@codejockeys.com 
 //		http://www.codejockeys.com/kstowell/index.html 
 //  
@@ -17,7 +17,7 @@
 // providing that this notice and the authors name and all copyright     
 // notices remains intact. If the source code in this file is used in     
 // any  commercial application then a statement along the lines of     
-// "Portions Copyright © 1998 Kirk Stowell" must be included in     
+// "Portions Copyright ?1998 Kirk Stowell" must be included in     
 // the startup banner, "About" box or printed documentation. An email     
 // letting me know that you are using it would be nice as well. That's     
 // not much to ask considering the amount of work that went into this.    
@@ -126,7 +126,7 @@ protected:
 	afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 	afx_msg void OnNcPaint();
 	afx_msg void OnNcLButtonDown(UINT nHitTest, CPoint point);
-	afx_msg UINT OnNcHitTest(CPoint point);
+	afx_msg LRESULT OnNcHitTest(CPoint point);
 	afx_msg void OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS FAR* lpncsp);
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 	afx_msg void OnCaptureChanged(CWnd *pWnd);
